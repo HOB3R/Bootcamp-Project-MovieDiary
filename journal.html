@@ -16,7 +16,12 @@
 
     <main class="container mx-auto px-6 pt-32 pb-12">
         <h1 class="text-4xl font-bold mb-12">My List</h1>
+        <div class="toggle-container">
+            <button class="toggle-button active" data-category="movies">Movies</button>
+            <button class="toggle-button" data-category="series">Series</button>
+        </div>
         <div id="journalMovies" class="grid gap-6"></div>
+        <div id="journalSeries" class="grid gap-6 hidden"></div>
     </main>
 
     <script src="js/journal.js"></script>

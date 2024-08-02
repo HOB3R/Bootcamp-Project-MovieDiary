@@ -6,6 +6,7 @@
     <title>Watch+</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-900 text-white min-h-screen font-sans">
@@ -49,38 +50,86 @@
         </div>
 
         <div id="regularContent">
-            <section class="section">
-                <h2 class="section-title">Popular Movies</h2>
+            <section class="section" data-section="popular">
+                <div class="flex items-center mb-4">
+                    <h2 class="section-title">Popular</h2>
+                    <div class="switch-container ml-4">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
                 <div class="movie-scroll-container">
-                    <div id="popularMovies" class="movie-row"></div>
+                    <div id="popularContent" class="movie-row"></div>
                 </div>
             </section>
-            <section class="section">
-                <h2 class="section-title">Top Rated Movies</h2>
+            
+            <section class="section" data-section="topRated">
+                <div class="flex items-center mb-4">
+                    <h2 class="section-title">Top Rated</h2>
+                    <div class="switch-container ml-4">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
                 <div class="movie-scroll-container">
-                    <div id="topRatedMovies" class="movie-row"></div>
+                    <div id="topRatedContent" class="movie-row"></div>
                 </div>
             </section>
-            <section class="section">
-                <h2 class="section-title">Latest Movies</h2>
+            
+            <section class="section" data-section="latest">
+                <div class="flex items-center mb-4">
+                    <h2 class="section-title">Latest</h2>
+                    <div class="switch-container ml-4">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
                 <div class="movie-scroll-container">
-                    <div id="latestMovies" class="movie-row"></div>
+                    <div id="latestContent" class="movie-row"></div>
                 </div>
             </section>
-            <section class="section">
-                <h2 class="section-title">Popular TV Shows</h2>
-                <div class="movie-scroll-container">
-                    <div id="popularTVShows" class="movie-row"></div>
-                </div>
-            </section>
+            
         </div>
     </main>
 
-    <footer class="bg-gray-800 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Watch+</p>
+    <footer class="bg-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-start">
+                <div class="w-full md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+                    <h2 class="text-3xl font-bold text-primary">Watch+</h2>
+                    <p class="text-gray-400 mt-2">Your go-to platform for all movies and series.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-right">
+                    <div class="md:max-w-sm md:ml-auto md:mr-0">
+                        <h3 class="text-xl font-semibold text-white text-left">Newsletter</h3>
+                        <p class="text-gray-400 mt-2 text-left">Subscribe to our newsletter for the latest updates.</p>
+                        <form class="mt-4 flex flex-col md:flex-row justify-center md:justify-end">
+                            <input type="email" class="bg-gray-700 text-white px-4 py-2 rounded-t-md md:rounded-l-md md:rounded-t-none focus:outline-none focus:ring-2 focus:ring-primary w-full md:flex-1" placeholder="Enter your email">
+                            <button type="submit" class="bg-primary text-white px-4 py-2 rounded-b-md md:rounded-r-md md:rounded-b-none hover:bg-primary-dark transition duration-300 md:flex-shrink-0">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2024 Watch+. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+    
+    
 
     <script src="js/main.js"></script>
 </body>
